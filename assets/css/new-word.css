@@ -32,25 +32,70 @@ header {
     top: 21px;
     left: 16px;
 }
+.textArea {
+    position: relative;
+    top: 50px;
+    left: 10px;
+
+    width: 343px;
+    height: 100px;
+
+	resize: none;
+	outline: none;
+    border: none;
+
+    background: transparent;
+
+    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+.textArea::placeholder {
+    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}
+.notice {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    position: absolute;
+    top: 245px;
+    left: 16px;
+}
+.notice > p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+
+    color: #495057;
+}
 .container {
     position: absolute;
-    top: 200px;
-    left: 29px;
+    top: 300px;
+    left: 20px;
 
     display: block;
     flex-direction: row;
     align-items: flex-start;
     gap: 8px;
 }
-#btn-game {
+#btn-save {
+    width: 330px;
+    height: 67px;
+
     background: #0A3871;
     border-radius: 24px;
     border: none;
 
-    position: relative;
-    width: 317px;
-    height: 105px;
-    
     color: #ffffff;
     font-family: 'Inter';
     font-style: normal;
@@ -59,21 +104,20 @@ header {
     line-height: 19px;
     text-align: center;
 }
-#btn-game:hover{
+#btn-save:hover{
     background: #0b4386;
     cursor: pointer;
 }
-#btn-new-word {
-    background: #F3F5FC;
-    border-radius: 24px;
-    border: 1px solid #0A3871;
-
-    position: relative;
+#btn-cancel {
     margin-top: 17px;
-    left: 13px;
 
-    width: 293px;
+    width: 330px;
     height: 67px;
+
+    background: transparent;
+    border-radius: 24px;
+
+    border: 1px solid #0A3871;
 
     color: #0A3871;
     font-family: 'Inter';
@@ -83,7 +127,7 @@ header {
     line-height: 19px;
     text-align: center;
 }
-#btn-new-word:hover{
+#btn-cancel:hover{
     background: #e1e7fc;
     cursor: pointer;
 }
@@ -91,29 +135,38 @@ header {
     #logo {
         left: 40px;
     }
+    #textArea{
+        position: absolute;
+        top: 180px;
+        left: 50px;
+    }
     .container {
-        top: 380px;
-        left: 220px;
-
-        width: 320px;
+        top: 580px;
+        left: 50px;
+    }
+    #btn-save {
+        margin-right: 10px;
     }
 }
 @media (min-width:1440px) {
-    #logo {
-        left: 40px;
+    #textArea{
+        position: absolute;
+        top: 180px;
+        left: 390px;
     }
     .container {
-        top: 390px;
-        left: 550px;
-
-        width: 320px;
+        top: 580px;
+        left: 390px;
     }
 }
-@media (min-width: 1500px) {
+@media (min-width:1500px) {
+    #textArea{
+        position: absolute;
+        top: 180px;
+        left: 600px;
+    }
     .container {
-        top: 390px;
-        left: 800px;
-
-        width: 320px;
+        top: 580px;
+        left: 600px;
     }
 }
